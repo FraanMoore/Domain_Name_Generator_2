@@ -1,11 +1,30 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let ext = [".com", ".net", ".us", ".io"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+for (let a = 0; a < pronoun.length; a++) {
+  for (let e = 0; e < adj.length; e++) {
+    for (let i = 0; i < noun.length; i++) {
+      for (let o = 0; o < ext.length; o++) {
+        let exit = pronoun[a] + adj[e] + noun[i] + ext[o];
+        console.log(exit);
+      }
+    }
+  }
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+for (let a = 0; a < pronoun.length; a++) {
+  for (let e = 0; e < adj.length; e++) {
+    for (let i = 0; i < noun.length; i++) {
+      for (let o = 0; o < ext.length; o++) {
+        let div = document.createElement("div");
+        div.innerText = `
+              ${pronoun[a]}${adj[e]}${noun[i]}${ext[o]}
+          `;
+        document.body.appendChild(div);
+      }
+    }
+  }
+}
